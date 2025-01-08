@@ -4,7 +4,7 @@
     }
     
     &--content {
-        padding: 60px 0px 28px;
+        padding: 60px 0px 40px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -45,8 +45,9 @@
         display: flex;
     }
     &--user_avatar {
-        margin-left: -15px;
+        margin-left: -16.35px;
     }
+
 
     &--picture img{
         max-width: 100%;
@@ -67,7 +68,10 @@
 
            flex-direction: column;
         }
-        
+
+        &--content {
+           gap: 0;
+        }
     }
 }
 
