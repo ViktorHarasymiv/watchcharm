@@ -7,3 +7,5 @@ import './scss/_variables.scss';
 
 import './partials/header/header.scss';
 import './scss/hero.scss';
+import './scss/hero.scss';
+import './partials/footer/footer.scss';

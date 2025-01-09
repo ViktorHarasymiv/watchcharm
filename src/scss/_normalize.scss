@@ -74,12 +74,17 @@ a {
   
   font-size: 14px;
   font-weight: 500;
-  color: var(--main)
+  color: inherit;
 }
 
 ul {
   margin: 0px;
   padding-inline-start: 0px;
+}
+
+h2,p {
+  font-weight: 500;
+  margin: 0
 }
 
 /**
