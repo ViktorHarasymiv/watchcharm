@@ -9,3 +9,5 @@ import './partials/header/header.scss';
 import './scss/modal.scss';
 import './scss/hero.scss';
 import './partials/footer/footer.scss';
+
+import './modal.js';
