@@ -70,10 +70,13 @@ li {
 }
 
 a {
+  
   display: block;
   
   font-size: 14px;
   font-weight: 500;
+
+  text-decoration: none;
   color: inherit;
 }
 
@@ -213,17 +216,6 @@ pre {
   @extend %monospace;
 }
 
-/* Links
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  text-decoration: none;
-  background-color: transparent;
-}
 
 /* Text-level semantics
    ========================================================================== */

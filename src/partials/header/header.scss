@@ -2,6 +2,7 @@
     .header {
         border-bottom: 2px solid #F3F3F3;
         &--wrapper {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,17 +57,20 @@
                 transition: all 0.3s ease-in;
             }
 
-            &:hover {
+            &.is-active{
+                z-index: 9999;
                 &::before {
                     position: absolute;
                     transform:rotate(135deg);
 
+                    background-color: #F3F3F3;
                     transition: all 0.3s ease-in;
                 }
                 &::after {
                     position: absolute;
                     transform:rotate(-135deg);
 
+                    background-color: #F3F3F3;
                     transition: all 0.3 ease-in;
                 }
             }
@@ -99,14 +103,10 @@
         &--navigation_menu {
             display: flex;
         }
-        &--address {
-            display: flex;
-        }
         &--menu_list {
             display: flex;
             gap: 40px;
         }
-
         &--navigation_link {
             position: relative;
             padding: 30px 0px 40px 0px;
@@ -132,6 +132,11 @@
         &--mobile_menu { 
             display: none;
         }
+
+        &--address {
+            display: flex;
+        }
+
         &--social_list {
             display: flex;
             gap: 10px;
@@ -158,5 +163,147 @@
         &--social_item:hover .socia_ico{
             fill: var(--accent);
         }
+
+        &--mobile_menu_panel { 
+            display: none;
+        }
+        &--mobile_menu_navigation {
+            display: none;
+        }
     }
+}
+
+@media screen and (min-width: 375px) and (max-width:1289.98px) {
+.header {
+    &--mobile_menu_panel {
+        z-index: -1;
+        position: absolute;
+        
+        top: 0;
+        right: 0;
+        
+        width: 0;
+
+        height: 100vh;
+        
+        background-color: rgba(12, 12, 12, 0.5);
+
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    &--mobile_menu_panel.is-active {
+        display: block;
+        z-index: 9998;
+
+        width: 100%;
+
+        opacity: 1;
+    }
+    &--mobile_menu_navigation {
+        z-index: 9998;
+        position: absolute;
+        
+        top: 0;
+        right: 0;
+        
+        width: 0;
+
+        height: 100vh;
+
+        background-color: rgba(12, 12, 12, 0.95);
+        background: url(./image/header/modalBack.jpg) no-repeat;
+
+
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+
+    &--mobile_menu_navigation.is-active {
+        width: clamp(200px, 60%, 330px);
+        opacity: 1;    
+    }
+
+    &--navigation_menu_modal {
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--menu_list_modal {
+        display: flex;
+        flex-direction: column;
+   
+        align-items: center;
+        gap: 34px;
+    }
+    &--navigation_link_modal {
+        display: none;
+        position: relative;
+        color: var(--background);
+
+        line-height: 129%;
+
+        opacity: 0;
+        transition: color .5s ease 3s;
+        
+        .--is-active::before {
+            position: absolute;
+
+            transform: translate(50%, 0);
+            right: 50%;
+            bottom: -13px;
+        
+            content: '';
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: var(--accent);
+            border-radius: 100%;
+        
+            opacity: 1;
+        }
+    }
+    &--mobile_menu_navigation.is-active &--navigation_link_modal {
+        display: block;
+        opacity: 1;
+    }
+    &--address_modal {
+        position: absolute;
+
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 40px;
+    }
+
+
+    &--social_list_modal {
+        display: flex;
+        gap: 10px;
+    }
+    &--social_item_modal {
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid rgba(251, 251, 251, 0.1);
+        border-radius: 10px;
+        
+        padding: 8px;
+        
+        max-width: 36px;
+        max-height: 36px;
+
+    }
+    &--social_link_modal {
+        line-height: 0;
+    }
+    .socia_ico{ 
+        fill: var(--background);
+    }
+    &--social_item_modal:hover .socia_ico{
+        fill: var(--accent);
+    }
+}
 }
