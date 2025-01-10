@@ -10,7 +10,7 @@ import './scss/modal.scss';
 import './scss/hero.scss';
 import './partials/footer/footer.scss';
 
-import './scripts/modal';
+import './public/modal.js';
 
 // function openModal() {
 //     const button = document.querySelector('.header--mobile_menu');
