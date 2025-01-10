@@ -6,5 +6,4 @@ function openModal() {
     button.classList.toggle('is-active');
     activePanel.classList.toggle('is-active');
     activeBar.classList.toggle('is-active');
-
 }
