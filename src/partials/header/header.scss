@@ -180,6 +180,7 @@
         position: absolute;
         
         top: 0;
+        bottom: 0;
         right: 0;
         
         width: 0;
@@ -208,10 +209,10 @@
         
         width: 0;
 
-        height: 100vh;
+        height: 100%;
 
         background-color: rgba(12, 12, 12, 0.95);
-        background: url(./image/header/modalBack.jpg) no-repeat;
+        background: url(img/modal/modalBack.jpg) no-repeat 10% 30%;
 
 
         opacity: 0;
