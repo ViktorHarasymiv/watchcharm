@@ -2,16 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./dist/assets/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WatchCharm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
-    <load src="./partials/header/header.html" />
-    <load src="./partials/main/main.html" />
-    <load src="./partials/footer/footer.html" />
+  <body id="to_top-scroll">
+    <load src="./partials/header.html" />
+    <load src="./partials/modal.html" />
+    <main>
+      <!-- Loads the specified .html file -->
+      <load src="./partials/hero.html" />
+      <load src="./partials/about-us.html" />
+      <load src="./partials/catalog.html" />
+      <load src="./partials/advertisement.html" />
+      <load src="./partials/sale.html" />
+      <load src="./partials/reviews.html" />
+      <load src="./partials/contact-us.html" />
+    </main>
+
+    <load src="./partials/footer.html" />
 
     <script type="module" src="./main.js"></script>
-    <script src="/modal.js"></script>
+
+    <script src="/scripts/form.js"></script>
+    <script src="/scripts/modal.js"></script>
+    <script src="/scripts/activeLink.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        cssMode: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
   </body>
 </html>
