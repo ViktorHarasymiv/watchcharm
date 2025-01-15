@@ -1,0 +1,61 @@
+:root {
+  --font-family: 'Gilroy', sans-serif;
+  --main: #0c0c0c;
+  --accent: #3350e9;
+  --background: #fbfbfb;
+  --cards: #f3f3f3;
+
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--main);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Gilroy', sans-serif;
+  background: var(--background);
+}
+
+main {
+  flex-grow: 1;
+}
+
+#about_section,
+#catalog_section,
+#contact_section,
+#reviews_section{
+  scroll-margin-top: 60px;
+}
+
+#sale_section  {
+  scroll-margin-top: 25px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
